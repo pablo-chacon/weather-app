@@ -1,5 +1,5 @@
 <template>
-  <button class="btn-search" @click="handleButton">{{ text }}</button>
+  <button class="search-btn" @click="handleButton">{{ text }}</button>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.btn-search {
+.search-btn {
   width: 100%;
   font-size: 26px;
   padding: 0.25em 1em;

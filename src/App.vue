@@ -21,7 +21,7 @@
 <script lang="ts">
 // Children
 import TopHeader from "./components/TopHeader.vue";
-import ButtonSearch from "./components/ButtonSearch.vue";
+import SearchButton from "./components/SearchButton.vue";
 import DisplayWeather from "./components/DisplayWeather.vue";
 import DisplayForcast from "./components/DisplayForcast.vue";
 
@@ -31,7 +31,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "App",
-  components: { TopHeader, ButtonSearch, DisplayWeather, DisplayForcast },
+  components: { TopHeader, SearchButton, DisplayWeather, DisplayForcast },
   data() {
     return {
       apiKey: process.env.VUE_APP_WEATHER_API_KEY,
@@ -139,7 +139,7 @@ export default defineComponent({
         .catch((err) => console.log(err));
     },
     // Request weather forecast
-    fetchWeatherForecast() {
+    fetchForecast() {
       const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${this.lat}&lon=${this.lon}&appid=${this.apiKey}${this.unit}`;
       this.weatherList = [];
 
